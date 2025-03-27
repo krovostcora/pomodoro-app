@@ -49,6 +49,8 @@ async function fetchWeather() {
 
         const data = await response.json();
 
+        weatherDataSection.style.display = "flex";
+
         weatherDataSection.innerHTML = `
 <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${data.weather[0].description}" width="100" />
 <div>
